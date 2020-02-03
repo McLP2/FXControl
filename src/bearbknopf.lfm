@@ -1,0 +1,64 @@
+object Form2: TForm2
+  Left = 342
+  Height = 123
+  Top = 169
+  Width = 356
+  Caption = 'Knopf bearbeiten'
+  ClientHeight = 123
+  ClientWidth = 356
+  OnKeyPress = FormKeyPress
+  LCLVersion = '1.4.4.0'
+  object EdtButtonName: TEdit
+    AnchorSideRight.Side = asrBottom
+    Left = 128
+    Height = 23
+    Top = 13
+    Width = 207
+    Anchors = [akTop, akLeft, akRight]
+    OnKeyPress = FormKeyPress
+    TabOrder = 0
+    Text = 'EdtButtonName'
+  end
+  object BtnOK: TButton
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Side = asrBottom
+    Left = 260
+    Height = 25
+    Top = 83
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Caption = 'OK'
+    OnClick = BtnOKClick
+    TabOrder = 1
+  end
+  object LblButtonName: TLabel
+    Left = 16
+    Height = 15
+    Top = 16
+    Width = 65
+    Caption = 'Knopfname:'
+    ParentColor = False
+  end
+  object LblButtonSound: TLabel
+    Left = 16
+    Height = 15
+    Top = 48
+    Width = 65
+    Caption = 'Audio Datei:'
+    ParentColor = False
+  end
+  object FNEsound: TFileNameEdit
+    Left = 128
+    Height = 23
+    Top = 43
+    Width = 207
+    Filter = 'Wavesound|*.wav'
+    FilterIndex = 0
+    HideDirectories = False
+    ButtonWidth = 23
+    DirectInput = False
+    NumGlyphs = 1
+    MaxLength = 0
+    TabOrder = 2
+  end
+end

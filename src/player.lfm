@@ -1,0 +1,149 @@
+object Form1: TForm1
+  Left = 741
+  Height = 523
+  Top = 224
+  Width = 741
+  Caption = 'FX Control'
+  ClientHeight = 503
+  ClientWidth = 741
+  Constraints.MinHeight = 379
+  Constraints.MinWidth = 605
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  OnMouseWheelDown = FormMouseWheelDown
+  OnMouseWheelUp = FormMouseWheelUp
+  OnResize = FormResize
+  LCLVersion = '1.4.4.0'
+  object VolBar: TScrollBar
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Side = asrBottom
+    Left = 640
+    Height = 208
+    Top = 284
+    Width = 91
+    Anchors = [akRight, akBottom]
+    Kind = sbVertical
+    LargeChange = 6554
+    Max = 65535
+    PageSize = 0
+    SmallChange = 655
+    TabOrder = 2
+    OnChange = VolBarChange
+  end
+  object LBvol: TLabel
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Side = asrBottom
+    Left = 640
+    Height = 20
+    Top = 260
+    Width = 88
+    Alignment = taCenter
+    Anchors = [akRight, akBottom]
+    AutoSize = False
+    Caption = 'Lautstärke 100%'
+    Font.Height = 16
+    ParentColor = False
+    ParentFont = False
+    OptimalFill = True
+  end
+  object BTstop: TBitBtn
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Side = asrBottom
+    Left = 640
+    Height = 46
+    Top = 204
+    Width = 91
+    Anchors = [akRight, akBottom]
+    Caption = 'Stop'
+    OnClick = BTstopClick
+    TabOrder = 1
+  end
+  object BTblend: TBitBtn
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Side = asrBottom
+    Left = 640
+    Height = 46
+    Top = 148
+    Width = 91
+    Anchors = [akRight, akBottom]
+    Caption = 'Ausblenden'
+    OnClick = BTblendClick
+    TabOrder = 0
+  end
+  object BtnAddButton: TButton
+    Left = 24
+    Height = 32
+    Top = 16
+    Width = 32
+    Caption = '+'
+    ParentBidiMode = False
+    OnClick = BtnAddButtonClick
+    OnMouseWheelDown = FormMouseWheelDown
+    OnMouseWheelUp = FormMouseWheelUp
+    ParentFont = False
+    TabOrder = 3
+  end
+  object ScrollBar1: TScrollBar
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 608
+    Height = 503
+    Top = 0
+    Width = 17
+    Anchors = [akTop, akRight, akBottom]
+    Kind = sbVertical
+    LargeChange = 120
+    Max = 0
+    PageSize = 40
+    SmallChange = 40
+    TabOrder = 4
+    OnChange = ScrollBar1Change
+  end
+  object BlendTimer: TTimer
+    Interval = 10
+    OnTimer = BlendTimerTimer
+    left = 592
+    top = 176
+  end
+  object MainMenu1: TMainMenu
+    left = 252
+    top = 190
+    object MIFile: TMenuItem
+      Caption = 'Datei'
+      object MIOpen: TMenuItem
+        Caption = 'Öffnen ...'
+        ShortCut = 16463
+        OnClick = MIOpenClick
+      end
+      object MISave: TMenuItem
+        Caption = 'Speichern ...'
+        ShortCut = 16467
+        OnClick = MISaveClick
+      end
+      object MInone: TMenuItem
+        Caption = '-'
+      end
+      object MIClose: TMenuItem
+        Caption = 'Schließen'
+        ShortCut = 16465
+        OnClick = MICloseClick
+      end
+    end
+  end
+  object SaveDialog1: TSaveDialog
+    Title = 'Set speichern'
+    Filter = 'FX Control-Set|*.fxs'
+    Options = [ofOverwritePrompt, ofEnableSizing, ofViewDetail]
+    left = 248
+    top = 96
+  end
+  object OpenDialog1: TOpenDialog
+    Title = 'Set öffnen'
+    Filter = 'FX Control-Set|*.fxs'
+    Options = [ofFileMustExist, ofEnableSizing, ofViewDetail]
+    left = 328
+    top = 96
+  end
+end
