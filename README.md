@@ -1,5 +1,5 @@
 # FXControl
-I made this tool create a simple virtual launchpad for wave-files to use in theatre performance in school. 
+I made this tool to create a simple virtual launchpad for wave-files for use in a theatre performance in school. 
 
 New buttons can be added using the '+' button and can be edited using right-click.
 
